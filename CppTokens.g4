@@ -14,9 +14,9 @@ DOUBLE          : 'double';
 VOID            : 'void';
 BOOL            : 'bool';
 UNSIGNED        : 'unsigned';
-SIGNED          : 'signed';
 AUTO            : 'auto';
-
+INT_TYPE        : UNSIGNED? LONG{0,2} INT
+TYPE            : (UNSIGNED? CHAR) | (UNSIGNED? SHORT) | (UNSIGNED? LONG) | INT_TYPE | FLOAT | DOUBLE | BOOL | AUTO
 
 IF              : 'if';
 ELSE            : 'else';
