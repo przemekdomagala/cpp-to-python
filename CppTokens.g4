@@ -1,109 +1,106 @@
-//tokes
+// Tokens
+
+INCLUDE         : '#include';
+NAMESPACE       : 'namespace';
 
 
-Include         : '#include';
-Namespace       : 'namespace';
+CHAR            : 'char';
+SHORT           : 'short';
+INT             : 'int';
+LONG            : 'long';
+FLOAT           : 'float';
+DOUBLE          : 'double';
+VOID            : 'void';
+BOOL            : 'bool';
+UNSIGNED        : 'unsigned';
+SIGNED          : 'signed';
+AUTO            : 'auto';
 
 
-Char            : 'char';
-Short           : 'short';
-Int             : 'int';
-Long            : 'long';
-Float           : 'float';
-Double          : 'double';
-Void            : 'void';
-Bool            : 'bool';
-Unsigned        : 'unsigned';
-Signed          : 'signed';
-Auto            : 'auto';
+IF              : 'if';
+ELSE            : 'else';
+FOR             : 'for';
+WHILE           : 'while';
+DO              : 'do';
+CONTINUE        : 'continue';
+BREAK           : 'break';
+RETURN          : 'return';
+CONST           : 'const';
+CASE            : 'case';
+SWITCH          : 'switch';
+STRUCT          : 'struct';
+CLASS           : 'class';
+ENUM            : 'enum';
+VIRTUAL         : 'virtual';
+NEW             : 'new';
+DELETE          : 'delete';
+NULLPTR         : 'nullptr';
+OPERATOR        : 'operator';
+OVERRIDE        : 'override';
+PRIVATE         : 'private';
+PROTECTED       : 'protected';
+PUBLIC          : 'public';
+SIZEOF          : 'sizeof';
+THIS            : 'this';
+UNION           : 'union';
 
 
-If              : 'if';
-Else            : 'else';
-For             : 'for';
-While           : 'while';
-Do              : 'do';
-Continue        : 'continue';
-Break           : 'break';
-Return          : 'return';
-Const           : 'const';
-Case            : 'case';
-Switch          : 'switch';
-Struct          : 'struct';
-Class           : 'class';
-Enum            : 'enum';
-Virtual         : 'virtual';
-New             : 'new';
-Delete          : 'delete';
-Nullptr         : 'nullptr';
-Operator        : 'operator';
-Override        : 'override';
-Private         : 'private';
-Protected       : 'protected';
-Public          : 'public';
-Return          : 'return';
-Sizeof          : 'sizeof';
-This            : 'this';
-Union           : 'union';
+FALSE           : 'false';
+TRUE            : 'true';
 
-
-False           : 'false';
-True            : 'true';
-
-Increment       : '++';
-Decrement       : '--';
-Add             : '+';
-Substract       : '-';
-Multiply        : '*';
-Divide          : '/';
-Modulo          : '%';
-Equal           : '==';
-NonEqual        : '!=';
-Greater         : '>';
-Greater_Equal   : '>=';
-Lesser          : '<';
-Lesser_Equal    : '<=';
-Log_And         : '&&';
-Log_Or          : '||';
-Log_Not         : '!';
-Assign          : '=';
-Assign_add      : '+=';
-Assign_Substract : '-=';
-Assign_Multiply : '*=';  
-Assign_Devide   : '/=';
-Assign_Modulo   : '%=';
-Arrow           : '->';
-QustionMark     : '?';
-Ellipsis        : '...';
+INCREMENT       : '++';
+DECREMENT       : '--';
+ADD             : '+';
+SUBSTRACT       : '-';
+MULTIPLY        : '*';
+DIVIDE          : '/';
+MODULO          : '%';
+EQUAL           : '==';
+NONEQUAL        : '!=';
+GREATER         : '>';
+GREATER_EQUAL   : '>=';
+LESSER          : '<';
+LESSER_EQUAL    : '<=';
+LOG_AND         : '&&';
+LOG_OR          : '||';
+LOG_NOT         : '!';
+ASSIGN          : '=';
+ASSIGN_ADD      : '+=';
+ASSIGN_SUBSTRACT : '-=';
+ASSIGN_MULTIPLY : '*=';  
+ASSIGN_DIVIDE   : '/=';
+ASSIGN_MODULO   : '%=';
+ARROW           : '->';
+QUESTION_MARK   : '?';
+ELLIPSIS        : '...';
 
 
 
-Semicolon       : ';';
-Colon           : ':';
-Left_Parenthesis : '(';
-Right_Parenthesis : ')';
-Left_Square     : '[';
-Right_Square    : ']';
-Left_Bracket    : '{';
-Right_Bracket   : '}';
-Scope_Resolution : '::';
-Dot             : '.';
-Comma           : ',';
+SEMICOLON       : ';';
+COLON           : ':';
+LEFT_PARENTHESIS : '(';
+RIGHT_PARENTHESIS : ')';
+LEFT_SQUARE     : '[';
+RIGHT_SQUARE    : ']';
+LEFT_BRACKET    : '{';
+RIGHT_BRACKET   : '}';
+SCOPE_RESOLUTION : '::';
+DOT             : '.';
+COMMA           : ',';
 
 
-Id              : [A-Za-z_][a-zA-Z_0-9]*;
+ID              : [A-Za-z_][a-zA-Z_0-9]*;
 
-Any_Literal     : Any_Int_Literal | Char_Literal | Double_Literal | Float_Literal
+ANY_LITERAL     : ANY_INT_LITERAL | CHAR_LITERAL | DOUBLE_LITERAL | FLOAT_LITERAL
 INT_LITERAL     : '-'? ( '0' | [1-9][0-9]+)
-Char_Literal    : [\\s\\S]
-Float_Literal   : Double_Literal ( 'f' | 'F' )
-Double_Literal  : ('.' [0-9]+ | [0-9]+ '.' | [0-9]+ '.' [0-9]+) ([eE] [+-]? [0-9]+)?;
+CHAR_LITERAL    : [\\s\\S]
+FLOAT_LITERAL   : DOUBLE_LITERAL ( 'f' | 'F' )
+DOUBLE_LITERAL  : ('.' [0-9]+ | [0-9]+ '.' | [0-9]+ '.' [0-9]+) ([eE] [+-]? [0-9]+)?;
 
-Any_Int_Literal : INT_LITERAL | Unsigned_Int_Literal | Long_Int_Literal | Unsigned_Long_Int_Literal | Long_Long_Int_Literal | Unsigned_Long_Long_Int_literal;
+ANY_INT_LITERAL : INT_LITERAL | UNSIGNED_INT_LITERAL | LONG_INT_LITERAL | UNSIGNED_LONG_INT_LITERAL | LONG_LONG_INT_LITERAL | UNSIGNED_LONG_LONG_INT_LITERAL;
 
-Unsigned_Int_Literal : Int_Literal ('u' | 'U');
-Long_Int_Literal: Int_Literal ('l' | 'L');
-Unsigned_Long_Int_Literal: Int_Literal ('u' | 'U') ('l' | 'L');
-Long_Long_Int_Literal: Int_Literal ('l' | 'L') ('l' | 'L');
-Unsigned_Long_Long_Int_literal: Int_Literal ('u' | 'U') ('l' | 'L') ('l' | 'L');
-
+UNSIGNED_INT_LITERAL : INT_LITERAL ('u' | 'U');
+LONG_INT_LITERAL: INT_LITERAL ('l' | 'L');
+UNSIGNED_LONG_INT_LITERAL: INT_LITERAL ('u' | 'U') ('l' | 'L');
+LONG_LONG_INT_LITERAL: INT_LITERAL ('l' | 'L') ('l' | 'L');
+UNSIGNED_LONG_LONG_INT_LITERAL: INT_LITERAL ('u' | 'U') ('l' | 'L') ('l' | 'L');
