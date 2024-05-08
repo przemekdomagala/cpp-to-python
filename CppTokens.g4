@@ -2,7 +2,7 @@
 
 INCLUDE         : '#include';
 NAMESPACE       : 'namespace';
-INCLUDELITERAL  : '[<"] ~[<>"' \t\r\n\f]+ [>"]';
+
 
 
 CHAR            : 'char';
