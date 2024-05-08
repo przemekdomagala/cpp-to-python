@@ -7,6 +7,6 @@ Float           : 'float';
 Double          : 'double';
 Void            : 'void';
 Bool            : 'bool';
-Unsigned        : 'unsigned;
+Unsigned        : 'unsigned';
 Signed          : 'signed';
 
