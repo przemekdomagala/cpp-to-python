@@ -92,6 +92,7 @@ COMMA           : ',';
 ID              : [A-Za-z_][a-zA-Z_0-9]*;
 
 ANY_LITERAL     : ANY_INT_LITERAL | CHAR_LITERAL | DOUBLE_LITERAL | FLOAT_LITERAL
+BOOL_LITERAL    : FALSE | TRUE
 INT_LITERAL     : '-'? ( '0' | [1-9][0-9]+)
 CHAR_LITERAL    : [\\s\\S]
 FLOAT_LITERAL   : DOUBLE_LITERAL ( 'f' | 'F' )
