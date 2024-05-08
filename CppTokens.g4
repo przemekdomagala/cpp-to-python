@@ -89,3 +89,22 @@ Right_Bracket   : '}';
 Scope_Resolution : '::';
 Dot             : '.';
 Comma           : ',';
+
+
+ID              : [A-Za-z_][a-zA-Z_0-9]*;
+
+
+Any_Literal     : Any_Int_Literal | Char_Literal | Double_Literal | Float_Literal
+Int_Literal     : '-'? ( '0' | [1-9][0-9]+)
+Char_Literal    : [\\s\\S]
+Float_Literal   : Double_Literal ( 'f' | 'F' )
+Double_Literal  : ('.' [0-9]+ | [0-9]+ '.' | [0-9]+ '.' [0-9]+) ([eE] [+-]? [0-9]+)?;
+
+Any_Int_Literal : Int_Literal | Unsigned_Int_Literal | Long_Int_Literal | Unsigned_Long_Int_Literal | Long_Long_Int_Literal | Unsigned_Long_Long_Int_literal;
+
+Unsigned_Int_Literal : Int_Literal ('u' | 'U');
+Long_Int_Literal: Int_Literal ('l' | 'L');
+Unsigned_Long_Int_Literal: Int_Literal ('u' | 'U') ('l' | 'L');
+Long_Long_Int_Literal: Int_Literal ('l' | 'L') ('l' | 'L');
+Unsigned_Long_Long_Int_literal: Int_Literal ('u' | 'U') ('l' | 'L') ('l' | 'L');
+
