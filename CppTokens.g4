@@ -22,7 +22,6 @@ IF              : 'if';
 ELSE            : 'else';
 FOR             : 'for';
 WHILE           : 'while';
-DO              : 'do';
 CONTINUE        : 'continue';
 BREAK           : 'break';
 RETURN          : 'return';
