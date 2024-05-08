@@ -91,8 +91,7 @@ Dot             : '.';
 Comma           : ',';
 
 
-ID              : [A-Za-z_][a-zA-Z_0-9]*;
-
+Id              : [A-Za-z_][a-zA-Z_0-9]*;
 
 Any_Literal     : Any_Int_Literal | Char_Literal | Double_Literal | Float_Literal
 Int_Literal     : '-'? ( '0' | [1-9][0-9]+)
