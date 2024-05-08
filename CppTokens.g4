@@ -43,7 +43,6 @@ PROTECTED       : 'protected';
 PUBLIC          : 'public';
 SIZEOF          : 'sizeof';
 THIS            : 'this';
-UNION           : 'union';
 
 
 FALSE           : 'false';
