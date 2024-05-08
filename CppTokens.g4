@@ -2,7 +2,7 @@
 
 INCLUDE         : '#include';
 NAMESPACE       : 'namespace';
-INCLUDELITERAL  : '"[<] ~[<> \t\r\n\f]+ [>]"';
+
 
 
 CHAR            : 'char';
@@ -104,3 +104,6 @@ LONG_INT_LITERAL: INT_LITERAL ('l' | 'L');
 UNSIGNED_LONG_INT_LITERAL: INT_LITERAL ('u' | 'U') ('l' | 'L');
 LONG_LONG_INT_LITERAL: INT_LITERAL ('l' | 'L') ('l' | 'L');
 UNSIGNED_LONG_LONG_INT_LITERAL: INT_LITERAL ('u' | 'U') ('l' | 'L') ('l' | 'L');
+
+
+INCLUDELITERAL : [<"] ~[<>"' \t\r\n\f]+ [>"];
