@@ -26,8 +26,6 @@ CONTINUE        : 'continue';
 BREAK           : 'break';
 RETURN          : 'return';
 CONST           : 'const';
-CASE            : 'case';
-SWITCH          : 'switch';
 STRUCT          : 'struct';
 CLASS           : 'class';
 ENUM            : 'enum';
