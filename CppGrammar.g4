@@ -1,1 +1,10 @@
+program: include* statement*;
+include: INCLUDE INCLUDELITERAL;
+statement: namespace | enum | variable | function |  using_directive | class | struct;
+namespace: NAMESPACE ID LEFT_BRACKET /*placeholder*/ RIGHT_BRACKET SEMICOLON
+enum:
+variable: STATIC? CONST? (UNSIGNED? CHAR ID (ASSIGN CHAR_LITERAL)? | UNSIGNED? SHORT ID (ASSIGN INT_LITERAL)? | UNSIGNED? LONG ID (ASSIGN INT_LITERAL)? | UNSIGNED? INT_TYPE ID (ASSIGN ANY_INT_LITERAL)? | 
+FLOAT ID (ASSIGN FLOAT_LITERAL)?  | DOUBLE ID (ASSIGN DOUBLE_LITERAL)? | BOOL ID (ASSIGN BOOL_LITERAL)? | AUTO ID ASSIGN ANY_ITERAL) SEMICOLON
 
+function:
+using_directive:
