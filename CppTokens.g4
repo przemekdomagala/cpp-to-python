@@ -15,7 +15,7 @@ VOID            : 'void';
 BOOL            : 'bool';
 UNSIGNED        : 'unsigned';
 AUTO            : 'auto';
-INT_TYPE        : UNSIGNED? LONG{0,2} INT
+INT_TYPE        : 'UNSIGNED? LONG{0,2} INT'
 
 
 IF              : 'if';
