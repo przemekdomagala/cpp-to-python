@@ -1,3 +1,6 @@
+grammar Cpp
+import cppTokens
+
 program: include* statement*;
 include: INCLUDE INCLUDELITERAL SEMICOLON;
 statement: namespace | enum | variable | function | class | struct;
