@@ -1,4 +1,5 @@
 // Tokens
+grammar cppTokens
 
 INCLUDE         : '#include';
 NAMESPACE       : 'namespace';
