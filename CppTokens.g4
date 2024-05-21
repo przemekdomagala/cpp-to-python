@@ -28,7 +28,6 @@ BREAK           : 'break';
 RETURN          : 'return';
 CONST           : 'const';
 STRUCT          : 'struct';
-CLASS           : 'class';
 ENUM            : 'enum';
 VIRTUAL         : 'virtual';
 NEW             : 'new';
