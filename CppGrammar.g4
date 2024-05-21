@@ -1,5 +1,5 @@
-grammar Cpp
-import cppTokens
+grammar CppGrammar;
+import cppTokens;
 
 program: include* statement*;
 include: INCLUDE INCLUDELITERAL SEMICOLON;
