@@ -1,6 +1,3 @@
-//grammar CppGrammar;
-//import CppTokens;
-// Tokens
 grammar CppGrammar;
 
 INCLUDE         : '#include';
@@ -19,7 +16,6 @@ VOID            : 'void';
 BOOL            : 'bool';
 UNSIGNED        : 'unsigned';
 AUTO            : 'auto';
-//INT_TYPE        : UNSIGNED? LONG{0,2} INT;
 
 
 IF              : 'if';
@@ -93,21 +89,11 @@ COMMA           : ',';
 
 ID              : [A-Za-z_][a-zA-Z_0-9]*;
 
-//BOOL_LITERAL    : (FALSE | TRUE);
 INT_LITERAL     : '-'? ( '0' | [1-9][0-9]*);
 CHAR_LITERAL    : '\'' (~['\r\n] | '\\\'') '\'';
 FLOAT_LITERAL   : DOUBLE_LITERAL ( 'f' | 'F' );
 DOUBLE_LITERAL  : ('.' [0-9]+ | [0-9]+ '.' | [0-9]+ '.' [0-9]+) ([eE] [+-]? [0-9]+)?;
 
-
-
-//UNSIGNED_INT_LITERAL : INT_LITERAL ('u' | 'U');
-//LONG_INT_LITERAL: INT_LITERAL ('l' | 'L');
-//UNSIGNED_LONG_INT_LITERAL: INT_LITERAL ('u' | 'U') ('l' | 'L');
-//LONG_LONG_INT_LITERAL: INT_LITERAL ('l' | 'L') ('l' | 'L');
-//UNSIGNED_LONG_LONG_INT_LITERAL: INT_LITERAL ('u' | 'U') ('l' | 'L') ('l' | 'L');
-
-//ANY_INT_LITERAL : INT_LITERAL | UNSIGNED_INT_LITERAL | LONG_INT_LITERAL | UNSIGNED_LONG_INT_LITERAL | LONG_LONG_INT_LITERAL | UNSIGNED_LONG_LONG_INT_LITERAL;
 ANY_LITERAL     : (INT_LITERAL | CHAR_LITERAL | DOUBLE_LITERAL | FLOAT_LITERAL | BOOL_LITERAL);
 INCLUDELITERAL : [<"] ~[<>"' \t\r\n\f]+ [>"];
 Whitespace      : [ \t\r\n\f]+ -> skip;
