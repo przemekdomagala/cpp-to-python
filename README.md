@@ -13,5 +13,5 @@ Example of parsing contents from [Program.cpp](https://github.com/przemekdomagal
 
 
 
-Program.py:
+
 ![Converting Example](https://github.com/przemekdomagala/cpp-to-python/blob/main/programpy.png)
