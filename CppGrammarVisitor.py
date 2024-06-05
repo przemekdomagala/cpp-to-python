@@ -24,6 +24,21 @@ class CppGrammarVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by CppGrammarParser#class.
+    def visitClass(self, ctx:CppGrammarParser.ClassContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CppGrammarParser#class_scope.
+    def visitClass_scope(self, ctx:CppGrammarParser.Class_scopeContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CppGrammarParser#constructor.
+    def visitConstructor(self, ctx:CppGrammarParser.ConstructorContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by CppGrammarParser#namespace.
     def visitNamespace(self, ctx:CppGrammarParser.NamespaceContext):
         return self.visitChildren(ctx)

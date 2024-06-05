@@ -101,7 +101,13 @@ Whitespace      : [ \t\r\n\f]+ -> skip;
 
 program: (include | statement)+;
 include: INCLUDE INCLUDELITERAL;
-statement: enum_namespace_call? (namespace | enum | variable_declaration | function | struct);
+//statement: enum_namespace_call? (namespace | enum | variable_declaration | function | struct);
+statement: (class | enum | variable_declaration | function);
+
+class: CLASS ID (COLON (PRIVATE | PUBLIC | PROTECTED)? ID (COMMA (PRIVATE | PUBLIC | PROTECTED)? ID)*)?  LEFT_BRACKET class_scope RIGHT_BRACKET SEMICOLON;
+class_scope: (((PRIVATE | PUBLIC | PROTECTED) COLON)? (constructor | variable_declaration | function))*;
+constructor: ID LEFT_PARENTHESIS (variable (COMMA variable)*)? RIGHT_PARENTHESIS LEFT_BRACKET function_scope RIGHT_BRACKET;
+
 namespace: NAMESPACE ID LEFT_BRACKET function* variable_declaration* struct* enum* RIGHT_BRACKET SEMICOLON;
 enum: ENUM CLASS? ID LEFT_BRACKET ((ID (ASSIGN INT_LITERAL)?) (COMMA ID (ASSIGN INT_LITERAL)?)*)?  RIGHT_BRACKET SEMICOLON;
 struct: STRUCT ID LEFT_BRACKET struct_body RIGHT_BRACKET SEMICOLON;
@@ -114,7 +120,7 @@ function_scope: (for_loop | while_loop | arithmetic_operation SEMICOLON | if_sta
 function_call: enum_namespace_call? ID LEFT_PARENTHESIS (enum_namespace_call? ID | (INT_LITERAL | CHAR_LITERAL | DOUBLE_LITERAL | FLOAT_LITERAL | BOOL_LITERAL))? (COMMA(ID | (INT_LITERAL | CHAR_LITERAL | DOUBLE_LITERAL | FLOAT_LITERAL | BOOL_LITERAL)))* RIGHT_PARENTHESIS;
 for_loop: FOR LEFT_PARENTHESIS (variable_declaration | ID SEMICOLON | assign) if_expression SEMICOLON arithmetic_operation RIGHT_PARENTHESIS LEFT_BRACKET loop_scope RIGHT_BRACKET;
 loop_scope: ((for_loop | while_loop | BREAK SEMICOLON | CONTINUE SEMICOLON | arithmetic_operation SEMICOLON | if_statement | variable_declaration | assign | function_call | RETURN (enum_namespace_call? ID | (INT_LITERAL | CHAR_LITERAL | DOUBLE_LITERAL | FLOAT_LITERAL | BOOL_LITERAL))? | enum_namespace_call? SEMICOLON))*;
-while_loop: WHILE LEFT_PARENTHESIS LOG_NOT? (TRUE | FALSE | (enum_namespace_call? ID (LESSER | LESSER_EQUAL | GREATER | GREATER_EQUAL | EQUAL | NONEQUAL) (enum_namespace_call? ID | (INT_LITERAL | CHAR_LITERAL | DOUBLE_LITERAL | FLOAT_LITERAL | BOOL_LITERAL))) ((LOG_AND | LOG_OR) LOG_NOT? enum_namespace_call? ID (TRUE | FALSE | LESSER | LESSER_EQUAL | GREATER | GREATER_EQUAL | EQUAL | NONEQUAL) (enum_namespace_call? ID | (INT_LITERAL | CHAR_LITERAL | DOUBLE_LITERAL | FLOAT_LITERAL | BOOL_LITERAL)))*) RIGHT_PARENTHESIS LEFT_BRACKET loop_scope RIGHT_BRACKET;
+while_loop: WHILE LEFT_PARENTHESIS if_expression RIGHT_PARENTHESIS LEFT_BRACKET loop_scope RIGHT_BRACKET;
 if_expression: (inside_if | LOG_NOT LEFT_PARENTHESIS inside_if RIGHT_PARENTHESIS) ((LOG_AND | LOG_OR) (inside_if | LOG_NOT LEFT_PARENTHESIS inside_if RIGHT_PARENTHESIS))*;
 inside_if: (enum_namespace_call? ID | (INT_LITERAL | CHAR_LITERAL | DOUBLE_LITERAL | FLOAT_LITERAL | BOOL_LITERAL)) ((LESSER | LESSER_EQUAL | GREATER | GREATER_EQUAL | EQUAL | NONEQUAL) (enum_namespace_call? ID | (INT_LITERAL | CHAR_LITERAL | DOUBLE_LITERAL | FLOAT_LITERAL | BOOL_LITERAL)))?;
 if_statement: IF LEFT_PARENTHESIS if_expression RIGHT_PARENTHESIS LEFT_BRACKET loop_scope RIGHT_BRACKET (ELSE_IF LEFT_PARENTHESIS if_expression RIGHT_PARENTHESIS LEFT_BRACKET loop_scope RIGHT_BRACKET)* (ELSE LEFT_BRACKET loop_scope RIGHT_BRACKET)?;

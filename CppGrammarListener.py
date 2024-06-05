@@ -35,6 +35,33 @@ class CppGrammarListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by CppGrammarParser#class.
+    def enterClass(self, ctx:CppGrammarParser.ClassContext):
+        pass
+
+    # Exit a parse tree produced by CppGrammarParser#class.
+    def exitClass(self, ctx:CppGrammarParser.ClassContext):
+        pass
+
+
+    # Enter a parse tree produced by CppGrammarParser#class_scope.
+    def enterClass_scope(self, ctx:CppGrammarParser.Class_scopeContext):
+        pass
+
+    # Exit a parse tree produced by CppGrammarParser#class_scope.
+    def exitClass_scope(self, ctx:CppGrammarParser.Class_scopeContext):
+        pass
+
+
+    # Enter a parse tree produced by CppGrammarParser#constructor.
+    def enterConstructor(self, ctx:CppGrammarParser.ConstructorContext):
+        pass
+
+    # Exit a parse tree produced by CppGrammarParser#constructor.
+    def exitConstructor(self, ctx:CppGrammarParser.ConstructorContext):
+        pass
+
+
     # Enter a parse tree produced by CppGrammarParser#namespace.
     def enterNamespace(self, ctx:CppGrammarParser.NamespaceContext):
         pass
