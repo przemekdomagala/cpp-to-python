@@ -8,7 +8,7 @@ Simple Parse Tree Example:
 
 
 
-Example of converting content from [Program.cpp](https://github.com/przemekdomagala/cpp-to-python/blob/main/program.cpp)
+
 
 
 
