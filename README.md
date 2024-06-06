@@ -15,3 +15,11 @@ Example of converting content from [Program.cpp](https://github.com/przemekdomag
 
 
 ![Converting Example](https://github.com/przemekdomagala/cpp-to-python/blob/main/programpy.png)
+
+
+
+![Example1](https://github.com/przemekdomagala/cpp-to-python/blob/main/image.png)
+
+![Example2](https://github.com/przemekdomagala/cpp-to-python/blob/main/example.png)
+
+![Example3](https://github.com/przemekdomagala/cpp-to-python/blob/main/example3.png)
