@@ -12,12 +12,6 @@ Simple Parse Tree Example:
 
 
 
-
-
-![Converting Example](https://github.com/przemekdomagala/cpp-to-python/blob/main/programpy.png)
-
-
-
 ![Example1](https://github.com/przemekdomagala/cpp-to-python/blob/main/image.png)
 
 ![Example2](https://github.com/przemekdomagala/cpp-to-python/blob/main/example.png)
