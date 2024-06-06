@@ -1,4 +1,4 @@
-# Cpp to python converter with ANTLR4.
+# Cpp to python converter with ANTLR4 implemented in Python.
 
 [Grammar](https://github.com/przemekdomagala/cpp-to-python/blob/main/CppGrammar.g4)
 
